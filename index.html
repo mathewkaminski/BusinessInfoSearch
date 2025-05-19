@@ -83,7 +83,10 @@
             const formData = {
                 "Provider_Type": document.getElementById('providerType').value,
                 "Postal_Code": document.getElementById('postalCode').value.toUpperCase(),
-                "Radius_km": parseInt(document.getElementById('radius').value),
+                "Radius_km": (() => {
+                    const val = Number(document.getElementById('radius').value);
+                    return isNaN(val) || val < 1 ? 1 : val;
+                })(),
                 "submittedAt": new Date().toISOString(),
                 "formMode": "test"
             };
