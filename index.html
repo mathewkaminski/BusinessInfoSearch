@@ -81,9 +81,9 @@
             e.preventDefault();
             
             const formData = {
-                "Provider Type": document.getElementById('providerType').value,
-                "Postal Code": document.getElementById('postalCode').value.toUpperCase(),
-                "Radius (km)": parseInt(document.getElementById('radius').value),
+                "Provider_Type": document.getElementById('providerType').value,
+                "Postal_Code": document.getElementById('postalCode').value.toUpperCase(),
+                "Radius_km": parseInt(document.getElementById('radius').value),
                 "submittedAt": new Date().toISOString(),
                 "formMode": "test"
             };
